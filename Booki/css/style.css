@@ -30,6 +30,28 @@ a {
     text-decoration: none;
 }
 
+nav {
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+nav a {
+    padding: 10px 025px 30px 25px;
+}
+
+nav a:hover {
+    border-top: 3px solid #0065FC; 
+    color: #0065FC;
+}
+
+#logo1 {
+    margin-right: auto;
+    width: 5%;
+    padding: 0px 0px 0px 15px;
+}
 .section-title {
     margin: 0;
     font-size: 22px;
