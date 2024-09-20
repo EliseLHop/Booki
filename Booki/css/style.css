@@ -285,7 +285,40 @@ h4 {
     margin-bottom: 5px;
 }
 
+/*******Activités a Marseille******/
 
+.activites {
+    
+    padding: 30px;
+    
+}
+
+.activites-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+}
+
+.activites .card {
+    padding: 0px;
+}
+
+.activites-cards img {
+    height: 380px;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: none;
+}
+
+.activites-cards .card-title {
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.activites .section-title {
+    padding: 30px 0;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
