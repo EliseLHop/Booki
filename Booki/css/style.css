@@ -37,19 +37,31 @@ nav {
     align-items: center;
     justify-content: flex-end;
     flex-wrap: wrap;
+
 }
 
-nav a {
+nav .menu-button a {
     padding: 10px 025px 30px 25px;
+    border-top: 3px solid #FFFF;
+}
+
+nav .menu-button a:hover {
+    border-top: 3px solid #0065FC; 
+    color: #0065FC;
+}
+/***nav a {
+    padding: 10px 025px 30px 25px;
+    border-top: 3px solid #FFFF;
 }
 
 nav a:hover {
     border-top: 3px solid #0065FC; 
     color: #0065FC;
 }
-
+***/
 #logo1 {
     height: 19px;
+    padding-top: 30px;
     margin-right: auto;
 }
 
@@ -94,7 +106,7 @@ nav a:hover {
     font-weight: 700;
     font-size: 18px;
     text-align: center;
-
+    outline: none;
 }
 
 .search-bar button {
@@ -106,6 +118,12 @@ nav a:hover {
     border: 1px solid var(--main-color);
     border-radius: 0px 15px 15px 0px;
 }
+
+.search-bar button:active {
+    background-color: #0048b3;
+}
+
+
 
 /*******Filtres de préferences******/
 
@@ -167,6 +185,7 @@ nav a:hover {
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    margin-top: 20px;
 }
 
 .card img {
@@ -207,11 +226,15 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
-    gap: 29px;
+    justify-content: space-between;
+}
+
+.hebergements-cards a {
+    width: 31%;
 }
 
 .hebergements-cards img {
-    width: 249px;
+    width: 100%;
     height: 124px;
     border-radius: 20px 20px 0px 0px ;
 }
@@ -300,19 +323,22 @@ h4 {
 }
 
 .activites .card {
+    max-width: 300px;
     padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .activites-cards img {
     height: 380px;
     width: 100%;
+    object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border: none;
 }
 
 .activites-cards .card-title {
-    padding-bottom: 20px;
     padding-left: 20px;
 }
 
@@ -320,7 +346,40 @@ h4 {
     padding: 30px 0;
 }
 
+/**********Footer*******/
 
+footer {
+    background-color: var(--main-bg-color);
+    padding: 20px;
+}
+
+footer h3 {
+    margin: 0px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.footer .section-title {
+    font-size: 18px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.footer ul li {
+    padding-top: 15px;
+}
+
+.bottom-section {
+    width: 100%;
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
@@ -332,6 +391,10 @@ h4 {
 
     .hebergements {
         width: 100%;
+    }
+
+    .hebergements-cards a {
+        width: 30%;
     }
 
     .populaires {
@@ -346,7 +409,7 @@ h4 {
     }
 
     .populaires-cards a {
-        width: 30%;
+        width: 31%;
     }
 
     .populaires-cards .card-title {
@@ -356,14 +419,71 @@ h4 {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activites-cards a {
+        height: 100%;
+    }
+    .activites-cards img {
+        height: 200px;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
 
-    #logo1 {
-        justify-content: center;
+    .main-container {
+        padding: 0;
     }
 
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
     
+    nav .menu-button {
+        display: flex;
+        width: 100%;
+        text-align: center;
+      }
+
+    nav .menu-button a {
+        width: 50%;
+        padding: 0px 0px 15px;
+        border-bottom: 3px solid var(--main-bg-color);
+        border-top: 0;
+    }
+
+    nav .menu-button a:hover {
+        border-bottom: 3px solid #0065FC;
+        color: #0065FC;
+        border-top: 0;
+    }
+    #logo1 {
+        text-align: center;
+        margin: 0;
+        padding: 30px;
+    }
+
+    main {
+        padding: 0px 15px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        text-align: start;
+    }
+    .search-bar button {
+        display: none;
+    }
+
+    .search-bar .fa-magnifying-glass {
+        color: #FFFF;
+        border-radius: 15px;
+        background-color: #0065FC;
+        border: 1px solid #0065FC;  
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
+
+    }
+
+
 }
